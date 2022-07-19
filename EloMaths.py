@@ -19,6 +19,7 @@ class EloMaths():
         probabilities = self.probabilityOfWin(eloA, eloB)
         updatedEloA = eloA + self.kFactor * (wins[0] - probabilities[0])
         updatedEloB = eloB + self.kFactor * (wins[1] - probabilities[1])
+        return [updatedEloA, updatedEloB]
         
         
 
